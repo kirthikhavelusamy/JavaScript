@@ -1,0 +1,41 @@
+h1{
+    color:#FFAE42;
+    font-size:40px;
+    text-align: left;
+    margin-left: 10%;
+}
+h3{
+    text-align: center;
+}
+p{
+    color: #00008B;
+    text-align: left;
+    font-size:20px;
+}
+.bdyStyle1{
+    background-color: #f0f8ff;
+  }
+.formStyle 
+{
+    background-color: #6495ED;
+    height: auto;
+    width:fit-content;
+        align-items: center;
+    margin-left: 25%;
+  } 
+  .bdyStyle2{
+    background-color: #4d1a7f;
+  }
+  .bdyStyle3{
+    background-color: #008080;
+  }
+  .formStyle1 
+{
+    background-color: #cb4154;
+    height: 50%;
+    width:30%;
+    align-items: center;
+    margin-left: 25%;
+    padding-left: 20px;
+  } 
+ 

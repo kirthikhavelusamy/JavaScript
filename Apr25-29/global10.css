@@ -1,0 +1,89 @@
+.bdyStyle {
+  background-color: grey;
+}
+
+.formalign {
+  align-items: center;
+  padding-left: 150px;
+  padding-top: 50px;
+  width: 400px;
+}
+
+.box {
+  width: 500px;
+  height: 400px;
+  margin-left: 25%;
+  margin-top: 5%;
+  background-color: grey;
+  align-items: center;
+}
+
+.boxgrid {
+  width: 480px;
+  height: 350px;
+  margin-left: 2.25%;
+  padding-top: 5%;
+ margin-top: 20%;
+  border-radius: 15px;
+ background-color: white;
+}
+.alntext{
+  font-size:15px;
+    font-style: italic;
+    padding-top: 3px;
+}
+.alnheadtext{
+   font-size:15px;
+     font-weight:bold; 
+}
+.alnprice{
+  font-weight:bold; 
+color: #f59d56;
+padding-top: 3px;
+}
+.alnAmt
+{
+  text-align:right !important;
+}
+hr
+{
+ width: 450px;
+  }
+.grid {
+  padding: 8px;
+  display: grid;
+  width: 400px;
+  height: 50px;
+  grid-template-columns: auto;
+}
+
+@media screen and (min-width:48px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create four equal columns */
+  .column {
+    flex: 50%;
+    padding: 20px;
+  }

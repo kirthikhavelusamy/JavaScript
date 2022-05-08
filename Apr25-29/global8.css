@@ -1,0 +1,56 @@
+.flex {
+    display: flex;
+  
+}
+.vertical-flex {
+       text-align: center;
+    height: auto;
+}
+.box {
+    width: 250px;
+    height:fit-content;
+    border: 1px solid blue;
+    text-align: center; 
+    align-content: center;   
+    margin: 20px;
+    border-radius: 5px;
+}
+img{
+    width: 250px;
+}
+h4{
+padding: 5px;
+}
+/*style for qn 9 starts here */
+.heading {
+    font-family: sans-serif;
+    font-size: 60px;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    width: 100%;
+    margin-left: 23%;
+    height: 83px;
+    color: #8995da;
+    text-align: center;
+}
+li {
+    display: block;
+    /* padding: 15px;
+    text-transform: capitalize;
+    width: 175px; */
+    float: left;
+    margin-left: 50px;
+    margin-top: 30px
+}
+li a:hover {
+    background-color: #6670d8;
+    border: 8px solid #6670d8;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+li a {
+    text-decoration: none;
+}

@@ -1,0 +1,50 @@
+.bdyStyle3 {
+    background-color: #e4e1e1;
+}
+hr {
+    width: auto;
+    margin: inherit
+}
+ul {
+       width: 300px;
+    height: 273px;
+
+}
+li {
+    display: block;
+    padding: 15px;
+    width: auto;
+    height: 18px;
+    background-color: grey;
+
+}
+.imgSub {
+      float:right;
+    width: 60%;
+    height: 40%;
+    margin-top: 17px;
+    margin-right: 50px;
+}
+
+.bdyStyle2 {
+    background-color: #D3D3D3;
+}
+h3 {
+    text-align: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-content: center;
+    padding-left: 30px;
+}
+.boxgrid {
+    width: 200px;
+    height: 250px;
+    margin: 20px;
+}
+.imgsiz
+{
+    width: 100%;
+    height: 200px;
+}
