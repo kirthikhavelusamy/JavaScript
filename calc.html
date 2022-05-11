@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title> JavaScript Calculator </title>
+    <link href="jsStylecs.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="headtxt">
+        <h1>Calculator Program Using JavaScript</h1>
+    </div>
+    <!-- create table -->
+    <div class="calcaln">
+                  <table border="2" align="center">
+            <tr>
+                <td><input type="button" value="c" onclick="clr()" /> </td>
+                <td colspan="3"><input type="text" id="finalVal" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="+" onclick="dis('+')" /> </td>
+                <td><input type="button" value="1" onclick="dis('1')" /> </td>
+                <td><input type="button" value="2" onclick="dis('2')" /> </td>
+                <td><input type="button" value="3" onclick="dis('3')" /> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="-" onclick="dis('-')" /> </td>
+                <td><input type="button" value="4" onclick="dis('4')" /> </td>
+                <td><input type="button" value="5" onclick="dis('5')" /> </td>
+                <td><input type="button" value="6" onclick="dis('6')" /> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="*" onclick="dis('*')" /> </td>
+                <td><input type="button" value="7" onclick="dis('7')" /> </td>
+                <td><input type="button" value="8" onclick="dis('8')" /> </td>
+                <td><input type="button" value="9" onclick="dis('9')" /> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="/" onclick="dis('/')" /> </td>
+                <td><input type="button" value="." onclick="dis('.')" /> </td>
+                <td><input type="button" value="0" onclick="dis('0')" /> </td>
+                <td><input type="button" value="=" onclick="calcVal()" /> </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+<script>
+    //function for displaying values
+    function dis(val) {
+        document.getElementById("finalVal").value += val
+    }
+    //function for evaluation
+    function calcVal() {
+        let x = document.getElementById("finalVal").value
+        let y = eval(x)
+        document.getElementById("finalVal").value = y
+    }
+    //function for clearing the display
+    function clr() {
+        document.getElementById("finalVal").value = ""
+    }
+</script>

@@ -1,0 +1,25 @@
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgb(65, 172, 172);
+}
+.headtxt
+{
+ text-align: center;
+  background-color: rgb(65, 172, 172);
+  font-weight: bolder;
+  color: #fff;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+  input[type="button"]
+  {
+  border-radius: 10px;
+  background-color:rgb(65, 172, 172);
+  color: white;  
+  width:100%;
+  }
+ .calcaln
+ {
+  padding-top: 10px;
+  margin-top: 2%;
+  height: 300px;
+ }
