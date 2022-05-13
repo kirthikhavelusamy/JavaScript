@@ -1,0 +1,270 @@
+<html>
+<head> 
+  <link href="jsStylecs.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <title>JavaScript</title>
+</head>
+<body>
+    <div class="headtxt">
+      <h1>Javascript Arithmetic Operation</h1>
+    </div>
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <!-- Start of the addition operation-->
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="headtxt">
+              Program to Add Two Numbers
+            </div>
+            <table>
+              <tr>
+                <td>First number</td>
+                <td><input type="text" id="num1"> <br /></td>
+              </tr>
+              <tr>
+                <td>Second number</td>
+                <td><input type="text" id="num2"> <br /></td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                  <button class="btn btn-outline-success" onclick="addoper()">Add</button>
+                </td>
+              </tr>
+            </table>
+            <div id="addResult"></div>
+          </div>
+        </div>
+        <!-- End of the addition operation-->
+        <!-- Start of the triangle operation-->
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <!-- Area of Triangle (b*h)/2 -->
+            <div class="headtxt">
+              Program to Calculate the Area of a Triangle
+            </div>
+            <table>
+              <tr>
+                <td>Enter the height</td>
+                <td><input type="text" id="height"> <br /></td>
+              </tr>
+              <tr>
+                <td>Enter the base</td>
+                <td><input type="text" id="base"> <br /></td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                  <button class="btn btn-outline-success" onclick="triangleOper()">Calculate Area</button>
+                </td>
+              </tr>
+            </table>
+            <div id="areaResult"></div>
+          </div>
+        </div>
+        <!-- End of the triangle operation-->
+        <!-- Start of the Swap Two Variables operation-->
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="headtxt">
+              Program to Swap Two Variables
+            </div>
+            <table>
+              <tr>
+                <td>Enter A</td>
+                <td><input type="text" id="aVal"> <br /></td>
+              </tr>
+              <tr>
+                <td>Enter B</td>
+                <td><input type="text" id="bVal"> <br /></td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                  <button class="btn btn-outline-success" onclick="swapOper()">Swap</button>
+                </td>
+              </tr>
+            </table>
+            <div id="swapResult"></div>
+          </div>
+        </div>
+        <!-- End of the Swap Two Variables operation-->
+        <!-- Start of the Number is Odd or Even operation-->
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="headtxt">
+              Program to Check if a Number is Odd or Even
+            </div>
+            <table>
+              <tr>
+                <td>Enter a number</td>
+                <td><input type="text" id="num"> <br /></td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                  <button class="btn btn-outline-success" onclick="oddReven()"> Odd / Even </button>
+                </td>
+              </tr>
+            </table>
+            <div id="oddRevenResult"></div>
+          </div>
+        </div>
+        <!-- End of the Number is Odd or Even operation-->
+        <!-- Start of the Largest Among Three Numbers operation-->
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="headtxt">
+              Find the Largest Among Three Numbers
+            </div>
+            <table>
+              <tr>
+                <td>First number</td>
+                <td><input type="text" id="numL"> <br /></td>
+              </tr>
+              <tr>
+                <td>Second number</td>
+                <td><input type="text" id="numM"> <br /></td>
+              </tr>
+              <tr>
+                <td>Third number</td>
+                <td><input type="text" id="numN"> <br /></td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                  <button class="btn btn-outline-success" onclick="largestOper()">Check</button>
+                </td>
+              </tr>
+            </table>
+            <div id="largestResult"></div>
+          </div>
+        </div>
+        <!-- End of the Largest Among Three Numbers operation-->
+        <!-- Start of the Prime Numbers operation-->
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <div class="headtxt">
+              Program to Check Prime Number
+            </div>
+            <table>
+              <tr>
+                <td>Enter a number</td>
+                <td><input type="text" id="pNumber"> <br /></td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td>
+                  <button class="btn btn-outline-success" onclick="IsPrime()">Validate</button>
+                </td>
+              </tr>
+            </table>
+            <div id="primeNumResult"></div>
+          </div>
+        </div>
+        <!-- End of the Prime Number operation-->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  //add 2 numbers
+  function addoper() {
+    var a = document.getElementById("num1").value;
+    var b = document.getElementById("num2").value;
+    var result = Number(a) + Number(b);
+    document.getElementById("addResult").innerHTML = a + " + " + b + " is " + result;
+  }
+  //-----------------------------------------------------------------------------------
+  //calculate area of a triangle
+  function triangleOper() {
+    var h = document.getElementById("height").value;
+    var b = document.getElementById("base").value;
+    var res = (h * b) / 2;
+    document.getElementById("areaResult").innerHTML = "Area of triangle (h*b)/2 : " + res;
+  }
+  //-----------------------------------------------------------------------------------
+  //Swap  given numbers
+  function swapOper() {
+    var x = document.getElementById("aVal").value;
+    var y = document.getElementById("bVal").value;
+    x = Number(x) + Number(y);
+    y = x - Number(y);
+    x = x - y;
+    document.getElementById("swapResult").innerHTML = "Now value of A : " + x + " & B : " + y;
+  }
+  //-----------------------------------------------------------------------------------
+  //check odd or even
+  function oddReven() {
+    var z = document.getElementById("num").value;
+    var res = z % 2;
+    if (res == 0) {
+      document.getElementById("oddRevenResult").innerHTML = z + " is an Even number";
+    }
+    else {
+      document.getElementById("oddRevenResult").innerHTML = z + " is an Odd number";
+    }
+  }
+  //-----------------------------------------------------------------------------------
+  //find the largest of three numbers
+  function largestOper() {
+    var x = parseFloat(document.getElementById("numL").value);
+    var y = parseFloat(document.getElementById("numM").value);
+    var z = parseFloat(document.getElementById("numN").value);
+    var resval = "";
+
+    if (x >= y && x >= z) {
+      resval = x;
+    }
+    else if (y >= x && y >= z) {
+      resval = y;
+    }
+    else {
+      resval = z;
+    }
+    document.getElementById("largestResult").innerHTML = resval + " is the largest number.";
+  }
+  //-----------------------------------------------------------------------------------
+  //check prime or not
+  function IsPrime() {
+    var x = document.getElementById("pNumber").value;
+    var i = 2;
+    var flag = true;
+    if (Number(x) == 2) {
+      document.getElementById("primeNumResult").innerHTML = x + " is a prime number";
+    }
+    else {
+      for (i = 2; i < Number(x) - 1; i++) {
+        if (Number(x) % i == 0) { 
+          flag = false;
+          break;
+        }
+      }
+      if (flag == true) {
+        document.getElementById("primeNumResult").innerHTML = x + " is a Prime Number";
+      }
+      else if (flag == false) {
+        document.getElementById("primeNumResult").innerHTML = x + " is not a Prime Number";
+      }
+    }
+  }
+</script>
