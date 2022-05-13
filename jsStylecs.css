@@ -23,3 +23,31 @@
   margin-top: 2%;
   height: 300px;
  }
+ .problembox
+ {
+   padding-left: 30px;
+ }
+ .subheadtxt
+{
+ text-align: center;
+   font-size: small;
+  color: rgb(19, 2, 2);
+  }
+  .finaltxt
+{
+ text-align: left;
+    font-weight: bolder;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.inputtxt
+{
+  width:100px;
+  height: 30px;
+  border: solid black 2px;
+  text-align: center;
+}
+h5{
+  padding-left: 30px;
+  text-decoration: underline;
+}
