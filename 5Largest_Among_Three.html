@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <link href="jsStylecs.css" rel="stylesheet">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <div class="headtxt">
+        <h1>Javascript Arithmetic Operation</h1>
+    </div>
+    <!-- Start of the Largest Among Three Numbers operation-->
+    <div class="headtxt">
+        Find the Largest Among Three Numbers
+    </div>
+    <table>
+        <tr>
+            <td>First number</td>
+            <td><input type="text" id="numL"> <br /></td>
+        </tr>
+        <tr>
+            <td>Second number</td>
+            <td><input type="text" id="numM"> <br /></td>
+        </tr>
+        <tr>
+            <td>Third number</td>
+            <td><input type="text" id="numN"> <br /></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="largestOper()">Check</button>
+            </td>
+        </tr>
+    </table>
+    <div id="largestResult"></div>
+    </div>
+    </div>
+    <!-- End of the Largest Among Three Numbers operation-->
+</body>
+
+</html>
+<script>
+    //find the largest of three numbers
+    function largestOper() {
+        var x = parseFloat(document.getElementById("numL").value);
+        var y = parseFloat(document.getElementById("numM").value);
+        var z = parseFloat(document.getElementById("numN").value);
+        var resval = "";
+
+        if (x >= y && x >= z) {
+            resval = x;
+        }
+        else if (y >= x && y >= z) {
+            resval = y;
+        }
+        else {
+            resval = z;
+        }
+        document.getElementById("largestResult").innerHTML = resval + " is the largest number.";
+    }
+
+</script>

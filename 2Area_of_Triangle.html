@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link href="jsStylecs.css" rel="stylesheet">
+      <title>JavaScript</title>
+</head>
+
+<body>
+    <div class="headtxt">
+        <h1>Javascript Arithmetic Operation</h1>
+    </div>
+    <!-- Area of Triangle (b*h)/2 -->
+    <div class="headtxt">
+        Program to Calculate the Area of a Triangle
+    </div>
+    <table>
+        <tr>
+            <td>Enter the height</td>
+            <td><input type="text" id="height"> <br /></td>
+        </tr>
+        <tr>
+            <td>Enter the base</td>
+            <td><input type="text" id="base"> <br /></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="triangleOper()">Calculate Area</button>
+            </td>
+        </tr>
+    </table>
+    <div id="areaResult"></div>
+</body>
+
+</html>
+<script>
+
+    //calculate area of a triangle
+    function triangleOper() {
+        var h = document.getElementById("height").value;
+        var b = document.getElementById("base").value;
+        var res = (h * b) / 2;
+        document.getElementById("areaResult").innerHTML = "Area of triangle (h*b)/2 : " + res;
+    }  
+</script>

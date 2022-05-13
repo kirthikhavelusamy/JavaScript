@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link href="jsStylecs.css" rel="stylesheet">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <div class="headtxt">
+        <h1>Javascript Arithmetic Operation</h1>
+    </div>
+    <!-- Start of the Swap Two Variables operation-->
+    <div class="headtxt">
+        Program to Swap Two Variables
+    </div>
+    <table>
+        <tr>
+            <td>Enter A</td>
+            <td><input type="text" id="aVal"> <br /></td>
+        </tr>
+        <tr>
+            <td>Enter B</td>
+            <td><input type="text" id="bVal"> <br /></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="swapOper()">Swap</button>
+            </td>
+        </tr>
+    </table>
+    <div id="swapResult"></div>
+</body>
+
+</html>
+<script>
+    //Swap  given numbers
+    function swapOper() {
+        var x = document.getElementById("aVal").value;
+        var y = document.getElementById("bVal").value;
+        x = Number(x) + Number(y);
+        y = x - Number(y);
+        x = x - y;
+        document.getElementById("swapResult").innerHTML = "Now value of A : " + x + " & B : " + y;
+    }
+</script>

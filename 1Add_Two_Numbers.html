@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link href="jsStylecs.css" rel="stylesheet">
+    <title>JavaScript</title>
+</head>
+<body>
+    <div class="headtxt">
+        <h1>Javascript Arithmetic Operation</h1>
+    </div>
+    <div class="headtxt">
+        Program to Add Two Numbers
+    </div>
+    <table>
+        <tr>
+            <td>First number</td>
+            <td><input type="text" id="num1"> <br /></td>
+        </tr>
+        <tr>
+            <td>Second number</td>
+            <td><input type="text" id="num2"> <br /></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="addoper()">Add</button>
+            </td>
+        </tr>
+    </table>
+    <div id="addResult"></div>
+</body>
+
+</html>
+<script>
+    //add 2 numbers
+    function addoper() {
+        var a = document.getElementById("num1").value;
+        var b = document.getElementById("num2").value;
+        var result = Number(a) + Number(b);
+        document.getElementById("addResult").innerHTML = a + " + " + b + " is " + result;
+    }   
+</script>

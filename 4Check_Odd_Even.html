@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <link href="jsStylecs.css" rel="stylesheet">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <div class="headtxt">
+        Program to Check if a Number is Odd or Even
+    </div>
+    <table>
+        <tr>
+            <td>Enter a number</td>
+            <td><input type="text" id="num"> <br /></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="oddReven()"> Odd / Even </button>
+            </td>
+        </tr>
+    </table>
+    <div id="oddRevenResult"></div>
+</body>
+
+</html>
+<script>
+    //check odd or even
+    function oddReven() {
+        var z = document.getElementById("num").value;
+        var res = z % 2;
+        if (res == 0) {
+            document.getElementById("oddRevenResult").innerHTML = z + " is an Even number";
+        }
+        else {
+            document.getElementById("oddRevenResult").innerHTML = z + " is an Odd number";
+        }
+    }
+</script>

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <link href="jsStylecs.css" rel="stylesheet">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <div class="headtxt">
+        <h1>Javascript Arithmetic Operation</h1>
+    </div>
+    <!-- Start of the Prime Numbers operation-->
+    <div class="headtxt">
+        Program to Check Prime Number
+    </div>
+    <table>
+        <tr>
+            <td>Enter a number</td>
+            <td><input type="text" id="pNumber"> <br /></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="IsPrime()">Validate</button>
+            </td>
+        </tr>
+    </table>
+    <div id="primeNumResult"></div>
+    </div>
+    </div>
+    <!-- End of the Prime Number operation-->
+</body>
+
+</html>
+<script>
+    //check prime or not
+    function IsPrime() {
+        var x = document.getElementById("pNumber").value;
+        var i = 2;
+        var flag = true;
+        if (Number(x) == 2) {
+            document.getElementById("primeNumResult").innerHTML = x + " is a prime number";
+        }
+        else {
+            for (i = 2; i < Number(x) - 1; i++) {
+                if (Number(x) % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag == true) {
+                document.getElementById("primeNumResult").innerHTML = x + " is a Prime Number";
+            }
+            else if (flag == false) {
+                document.getElementById("primeNumResult").innerHTML = x + " is not a Prime Number";
+            }
+        }
+    }
+</script>
