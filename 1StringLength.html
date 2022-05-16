@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <div class="headtxt">
+        <h4>1.String Length</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the String</td>
+            <td><input type="text" id="strInp"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="lengthOper()">Calculate</button>
+            </td>
+        </tr>
+    </table>
+    <div id="lenResult"></div>
+</body>
+
+</html>
+<script>
+    //calculate length of the string
+    function lengthOper() {
+        var strinput = document.getElementById("strInp").value;
+        var result =  "The length of the string '" + strinput+"' is "+strinput.length;
+        document.getElementById("lenResult").innerHTML = result;
+        console.log(result);
+   }
+   </script>
