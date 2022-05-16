@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--2. write a program to replace the keyword="programming" to keyword="language"
+        (i).Input = "This is new programming";
+        (ii).Output ="This is new language"-->
+    <div class="headtxt">
+        <h4>2.Replace Keyword</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Sentence</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>Enter the word to change - Input</td>
+            <td><input type="text" id="kwInp"></td>
+        </tr>
+        <tr>
+            <td>Enter the word to change - Output</td>
+            <td><input type="text" id="kwOut"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="kwOper()">Replace</button>
+            </td>
+        </tr>
+    </table>
+    <div id="repResult"></div>
+</body>
+
+</html>
+<script>
+    //replace sentence with the keyword
+    function kwOper() {
+        var strinput = document.getElementById("srcSentence").value;
+        console.log("Original statement - " + strinput);
+        var strIp = document.getElementById("kwInp").value;
+        console.log("Keyword Input - " + strIp);
+        var strOp = document.getElementById("kwOut").value;
+        console.log("Keyword Output - " + strOp);
+        var replacestr = strinput.replace(strIp, strOp);
+        var resultstr = "Original sentence '" + strinput + "' is replaced as '" + replacestr + "'";
+        document.getElementById("repResult").innerHTML = resultstr;
+        console.log(resultstr);
+    }
+</script>
