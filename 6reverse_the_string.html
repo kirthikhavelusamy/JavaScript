@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--6.write a program to reverse the string (i)Input="salman" (ii)Output="namlas"-->
+    <div class="headtxt">
+        <h4>6.String reverse</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="arrOper()">Reverse</button>
+            </td>
+        </tr>
+    </table>
+    <div id="revResult"></div>
+</body>
+
+</html>
+<script>
+    //reverse the string to
+        function arrOper() {
+        var strinput = document.getElementById("srcSentence").value;
+        console.log("Original Input - " + strinput);
+        var splitstr = strinput.split("");
+        console.log(splitstr);
+        splitstr=splitstr.reverse();
+        console.log(splitstr);
+        splitstr=splitstr.join("");
+        document.getElementById("revResult").innerHTML = splitstr;
+        console.log(splitstr);
+    }
+</script>

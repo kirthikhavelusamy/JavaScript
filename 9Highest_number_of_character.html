@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--9.Write a program to find the highest number of character in given string 
+        (i)Input "programming is great" 
+        Ouput="m"-->
+    <div class="headtxt">
+        <h4>9.Highest number of character in a String</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="numberCharfn()">Check</button>
+            </td>
+        </tr>
+    </table>
+    <div id="chkResult"></div>
+</body>
+
+</html>
+<script>
+    //highest number of character
+    function numberCharfn() {
+        var finalStr = "";
+        var cnt = 1;
+        var maxcnt = 0;
+        var finalcnt = 0;
+        var finalstrs = 0;
+        var maxstr = "";
+        var resultstr = "";
+        var str = document.getElementById("srcSentence").value;
+        console.log("str - " + str);
+        var strarr = str.split("");
+        console.log("strarr - " + strarr);
+        strarr = strarr.sort();
+        console.log("strarr - " + strarr);
+        finalStr = strarr.join("");
+        console.log(finalStr);
+        //-----------------------------
+        for (var i = 0; i < finalStr.length; i++) {
+            if (strarr[i] != " ") {
+                if (strarr[i] == strarr[i + 1]) {
+                    cnt++;
+                    //    console.log(strarr[i] + " occurred " + cnt + " times ")
+                }
+                else {
+                    //console.log("else - strarr[i] " + strarr[i] + " - cnt " + cnt + " - maxcnt " + maxcnt + " - finalcnt " + finalcnt);
+                    if (cnt >= maxcnt) {
+                        maxcnt = cnt;
+                        maxstr = strarr[i];
+                        if (maxcnt >= finalcnt) {
+                            if (resultstr.includes(maxcnt)) {
+                                resultstr = resultstr + "\n" + maxstr + " occurred " + maxcnt + " times ";
+                                // console.log(resultstr);
+                            }
+                            else {
+                                resultstr = maxstr + " occurred " + maxcnt + " times ";
+                                //  console.log(resultstr);
+                            }
+                        }
+                    }
+                    cnt = 1;
+                    finalcnt = maxcnt;
+                }
+            }
+
+        }
+
+        if (maxcnt == 1) {
+            console.log("There is no repeated character in the given string - " + str);
+        }
+        else {
+            console.log(resultstr);
+        }
+    }
+</script>

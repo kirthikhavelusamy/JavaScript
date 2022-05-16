@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--4. program to split the string from (i)Input="Details" (ii)Output="eta"-->
+    <div class="headtxt">
+        <h4>4.Split String</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input String</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>Enter the start index</td>
+            <td><input type="text" id="kwStart"></td>
+        </tr>
+        <tr>
+            <td>Enter the end index</td>
+            <td><input type="text" id="kwEnd"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="kwOper()">Split</button>
+            </td>
+        </tr>
+    </table>
+    <div id="splitResult"></div>
+</body>
+
+</html>
+<script>
+    //replace sentence with the keyword
+    function kwOper() {
+        var strinput = document.getElementById("srcSentence").value;
+        console.log("Original statement - " + strinput);
+        var strSt = document.getElementById("kwStart").value;
+        console.log("Starting index - " + strSt);
+        var strEd = document.getElementById("kwEnd").value;
+        console.log("Ending index - " + strEd);
+        //  var splitstr = strinput.slice(strSt,strEd)
+        var splitstr = strinput.substring(strSt, strEd)
+        var resultstr = "Original sentence '" + strinput + "' is splitted as '" + splitstr + "'";
+        document.getElementById("splitResult").innerHTML = resultstr;
+        console.log(resultstr);
+    }
+</script>

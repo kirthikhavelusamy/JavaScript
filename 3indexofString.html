@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Index</title>
+</head>
+
+<body>
+    <div class="headtxt">
+        <h4>3.Index of char in a string</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the String</td>
+            <td><input type="text" id="strInp"></td>
+        </tr>
+        <tr>
+            <td>Enter the index to search</td>
+            <td><input type="text" id="strChar"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="IndexOper()">Calculate</button>
+            </td>
+        </tr>
+    </table>
+    <div id="idxResult"></div>
+</body>
+
+</html>
+<script>
+    //calculate length of the string
+    function IndexOper() {
+        var strinput = document.getElementById("strInp").value;
+        var strcharact = document.getElementById("strChar").value;
+        var result =  "The index of '" + strcharact+"' in "+ strinput+" is "+strinput.charAt(strcharact);
+        document.getElementById("idxResult").innerHTML = result;
+        console.log(result);
+   }
+   </script>

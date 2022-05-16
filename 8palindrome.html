@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--8.program to find palindrome in string (i)Input="madam" (ii)Ouput=true-->
+    <div class="headtxt">
+        <h4>8.Palindrome</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="arrOper()">Check</button>
+            </td>
+        </tr>
+    </table>
+    <div id="chkResult"></div>
+</body>
+
+</html>
+<script>
+    //palindrome operation
+    function arrOper() {
+        var revStr = "";
+        var revStrarr = [];
+        var str = document.getElementById("srcSentence").value;
+        console.log("str - " + str);
+        var revStrarr = str.split("");
+        console.log("revStrarr - " + revStrarr);
+        revStr = revStrarr.reverse();
+        console.log("revStr - " + revStr);
+        revStr = revStr.join("");
+        console.log(revStr);
+        if (revStr === str) {
+            console.log("true");
+            document.getElementById("chkResult").innerHTML = "true    "+str + " is a Palindrome";
+        } else {
+            console.log("false");
+            document.getElementById("chkResult").innerHTML = str + "is Not a Palindrome";
+        }
+    }
+</script>

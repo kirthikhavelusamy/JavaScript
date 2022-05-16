@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--7.Write a program to reverse the word (i)Input="Programming is great" (ii)Ouput=gnimmargrop si taergt"-->
+    <div class="headtxt">
+        <h>7. Reverse Sentence</h></h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="arrOper()">Reverse</button>
+            </td>
+        </tr>
+    </table>
+    <div id="revResult"></div>
+</body>
+
+</html>
+<script>
+    //Reverse Sentence
+    function arrOper() {
+        var revstrarr = [];
+        var revStr = "";
+        var str = document.getElementById("srcSentence").value;
+        var words = str.split(" ");
+        for (var i = 0; i < words.length; i++) {
+            revstrarr = words[i].split("");
+            console.log(revstrarr);
+            revStr = revstrarr.reverse();
+            console.log(revStr);
+            words[i] = revStr.join("");
+            console.log(words[i]);
+            words[i] += " ";
+        }
+        console.log(words);
+        document.getElementById("revResult").innerHTML = words.join("");
+    }
+</script>

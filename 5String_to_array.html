@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--5.Conver the string into array (i)Input="string"(ii)output=["s","t","r","i","n","g"]-->
+    <div class="headtxt">
+        <h4>5. String to array</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+           <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="arrOper()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    //string to array
+    function arrOper() {
+        var strinput = document.getElementById("srcSentence").value;
+        console.log("Original Input - " + strinput);
+        var splitstr = strinput.split('')
+        document.getElementById("arrResult").innerHTML = splitstr;
+        console.log(splitstr);      
+    }
+</script>
