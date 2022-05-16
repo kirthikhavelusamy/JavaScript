@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--11.Write a program to find the anagrams Input="salman" Input2="name" ouput="false"-->
+    <div class="headtxt">
+        <h4>11. Anagrams</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the first input</td>
+            <td><input type="text" id="srcSentence1"></td>
+        </tr>
+        <tr>
+            <td>Enter the second input</td>
+            <td><input type="text" id="srcSentence2"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="anagrmfn()">Check</button>
+            </td>
+        </tr>
+    </table>
+    <div id="chkResult"></div>
+</body>
+
+</html>
+<script>
+    //Anagram
+    function anagrmfn() {
+        var str3, str4;
+        var str1 = document.getElementById("srcSentence1").value.toLowerCase();
+        var str2 = document.getElementById("srcSentence2").value.toLowerCase();
+        console.log("First Input - " + str1);
+        console.log("Second Input - " + str2);
+        var strarr1 = str1.split("").sort();
+        var strarr2 = str2.split("").sort();
+        //------------------------------------
+        str3 = strarr1.join("").trim();
+        str4 = strarr2.join("").trim();
+        console.log("Sorted String 1 - " + str3);
+        console.log("Sorted String 2 - " + str4);
+        //------------------------------------
+        if (str3.length != str4.length) {
+            console.log("False");
+            document.getElementById("chkResult").innerHTML = str1 + " and " + str2 + " is not an anagram";
+        }
+        else {
+            if (str3 === str4) {
+                document.getElementById("chkResult").innerHTML = str1 + " and " + str2 + " is an anagram";
+                console.log("True");
+            }
+            else {
+                console.log("False");
+                document.getElementById("chkResult").innerHTML = str1 + " and " + str2 + " is not an anagram";
+            }
+        }
+    }
+</script>

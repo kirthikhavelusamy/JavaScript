@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--10.Write a program to find the vowels in given string (i)Input="salman" output="a","a"-->
+    <div class="headtxt">
+        <h4>10. Vowels in a String</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="vowelfn()">Check</button>
+            </td>
+        </tr>
+    </table>
+    <div id="chkResult"></div>
+</body>
+
+</html>
+<script>
+    //vowels
+    function vowelfn() {
+        var vowArr = ["a", "e", "i", "o", "u"];
+        var str = document.getElementById("srcSentence").value;
+        var strarr = str.split("");
+        var resultArr = [];
+        var k = 0;
+        //-----------------------------
+        for (var i = 0; i < str.length; i++) {
+            for (var j = 0; j < 5; j++) {
+                if (strarr[i] == vowArr[j]) {
+                    resultArr[k] = strarr[i];
+                    k++;
+                }
+            }
+        }
+        console.log(resultArr);
+        document.getElementById("chkResult").innerHTML = "In " + str + " there are " + resultArr.length + " vowel(s) " + resultArr;
+    }
+</script>
