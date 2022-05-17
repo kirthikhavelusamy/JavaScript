@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--3.Print the given array using "for each"  loop (i)Input:[33,44,11,33,44,555,11,11,45]-->
+    <div class="headtxt">
+        <h4>3. Print array using "for each" loop</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="arrOper()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    //print array using for
+    function arrOper() {
+        var strinput = document.getElementById("srcSentence").value;
+        var optext = "";
+        console.log("Original Input - " + strinput);
+        var splitstr = strinput.split(',');
+        // splitstr.forEach(function (x) {
+        //     optext = optext + "<br>" + x;
+        //     console.log(x);
+        // });
+        splitstr.forEach(element => {
+            optext = optext + "<br>" + element;
+            console.log(element);
+        });
+        document.getElementById("arrResult").innerHTML = optext;
+    }
+</script>

@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--9.Print the given array which is divisible by 5 or 2 
+        (i)Input:[33,44,11,33,44,555,11,11,45] 
+        (ii)output[44,44,555,45]-->
+    <div class="headtxt">
+        <h4>9.Print given array item which is divisible by 5 or 2</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="bubbleSort()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    function bubbleSort() {
+        var strinput = document.getElementById("srcSentence").value;
+        var srcarray = strinput.split(',');
+        var opTxt = "";
+        console.log("Input Array   - " + srcarray);
+        for (var i = 0; i < srcarray.length; i += 1) {
+            if ((srcarray[i] % 5 == 0) && (srcarray[i] % 2 == 0)) {
+                console.log(srcarray[i] + " is divisible by 5 and 2");
+                opTxt = opTxt + "," + srcarray[i];
+            } else if (srcarray[i] % 5 == 0) {
+                console.log(srcarray[i] + " is divisible by 5");
+                opTxt = opTxt + "," + srcarray[i];
+            } else if (srcarray[i] % 2 == 0) {
+                console.log(srcarray[i] + " is divisible by 2");
+                opTxt = opTxt + "," + srcarray[i];
+            }
+            else {
+                console.log(srcarray[i] + " is not divisible by 2 or 5");
+            }
+        }
+        srcarray = opTxt.substring(1, opTxt.length);
+        srcarray = srcarray.split(',');
+        console.log(srcarray);
+        document.getElementById("arrResult").innerHTML = srcarray;
+    }
+</script>

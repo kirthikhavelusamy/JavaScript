@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--5.Print the given array in reverse format without using built in funciton 
+        (i)Input:[33,44,11,33,44,555,11,11,45] 
+        (ii)output[45,11,11,555,44,33,11,44,33]-->
+    <div class="headtxt">
+        <h4>5. Print array reverse W/O using built in funciton</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="arrOper()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    //print array using for
+    function arrOper() {
+        var strinput = document.getElementById("srcSentence").value;
+        var optext = "";
+        console.log("Original Array - " + strinput);
+        var splitstr = strinput.split(',');
+        var optextln = splitstr.length;
+        optextln = optextln - 1;
+        for (i = optextln; i >= 0; i--) {
+            optext = optext + "," + splitstr[i];
+        }
+        optext = optext.substr(1, optext.length);
+        splitstr = optext.split(',');
+        console.log(splitstr);
+        console.log("Output Array   - " + splitstr);
+        document.getElementById("arrResult").innerHTML = optext;
+    }
+</script>

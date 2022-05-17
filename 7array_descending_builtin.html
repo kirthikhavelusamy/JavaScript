@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--7.Print the given array in descending order 
+        (i)Input:[33,44,11,33,44,555,11,11,45] 
+        (ii)output[555,45,44,44,33,33,11,11,11]  Using  built in function-->
+    <div class="headtxt">
+        <h4>7.Print the given array in descending order</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="arrOper()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    //print array using for
+    function arrOper() {
+        var strinput = document.getElementById("srcSentence").value;
+        var optext = "";
+        console.log("Original Array - " + strinput);
+        var splitstr = strinput.split(',');
+        splitstr = splitstr.sort(function (a, b) { return b - a });
+        optext = splitstr.join(',');
+        console.log(splitstr);
+        console.log("Output Array   - " + optext);
+        document.getElementById("arrResult").innerHTML = optext;
+    }
+</script>

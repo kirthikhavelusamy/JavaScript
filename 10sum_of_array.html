@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--10.Print the total sum of array 
+        (i)Input:[33,44,20,10] 
+        (ii)output 107-->
+    <div class="headtxt">
+        <h4>10.Print the total sum of array</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="addArray()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    function addArray() {
+        var strinput = document.getElementById("srcSentence").value;
+        var srcarray = strinput.split(',');
+        var opTxt = 0;
+        console.log("Input Array   - " + srcarray);
+        // for (var i = 0; i < srcarray.length; i += 1) {
+        //     opTxt = opTxt + Number(srcarray[i]);
+        // }
+        for (var i in srcarray) {
+            opTxt += Number(srcarray[i]);
+        }
+        console.log(opTxt);
+        document.getElementById("arrResult").innerHTML = opTxt;
+    }
+</script>
