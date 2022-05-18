@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--12. Input =[2,3,4,5,6,0,2,2,3,-1,4,5,3] output =[[2,3,4,5,6],[2,2,3]]. 
+        Please find the sub array with sequence of number which is less than zero-->
+    <div class="headtxt">
+        <h4>12.Print the sub array less than zero</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>Enter the number to check</td>
+            <td><input type="text" id="chnkcnt"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="checkArray()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    function checkArray() {
+        var opTxt = "";
+        var j = 0, i = 0;
+        var stroutput = [];
+        var strtempput = [];
+        var strinput = document.getElementById("srcSentence").value;
+        var cnt = Number(document.getElementById("chnkcnt").value);
+        var tmpCnt = 0;
+        var srcarray = strinput.split(',');
+        if (cnt === "") {
+            opTxt = "Please enter the number to check";
+        }
+        else {
+            for (i = 0; i < srcarray.length; i++) {
+                if (srcarray[i] > cnt) {
+                    strtempput[j] = srcarray[i];
+                    j++;
+                }
+                else {
+                    if (strtempput?.length) {
+                        stroutput.push(strtempput);
+                    }
+                    j = 0;
+                    strtempput = [];
+                    opTxt = "";
+                }
+            }
+            if (strtempput.length > 0) {
+                stroutput.push(strtempput);
+            }
+            j = 0;
+            strtempput = [];
+            opTxt = "";
+        }
+        console.log(stroutput);
+        document.getElementById("arrResult").innerHTML = stroutput;
+    }
+</script>

@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--11.Print the total in chunks of two 
+        (i)Input:[33,44,20,10] 
+        (ii)output [[33,44],[20,10]]-->
+    <div class="headtxt">
+        <h4>11.Print the total in chunks of two</h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>Enter the count in chunk</td>
+            <td><input type="text" id="chnkcnt"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="addArray()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    function addArray() {
+        var opTxt = "";
+        var stroutput = [];
+        var strtempput = [];
+        var strinput = document.getElementById("srcSentence").value;
+        var cnt = Number(document.getElementById("chnkcnt").value);
+        var tmpCnt = 0;
+       // var srcarray = strinput.split(',');
+       var srcarray = Array.from(strinput);
+        console.log("srcarray.length - " + srcarray.length);
+        //Input:[33,44,20,10]
+        if (cnt == "") {
+            opTxt = "Please enter the count in chunk";
+        }
+        else if (cnt > srcarray.length) {
+            opTxt = "The input is smaller than chunk count.. cant be chunked.";
+        }
+        else {
+            for (var i = 0; i < srcarray.length; i += cnt) {
+                tmpCnt = 0
+                for (var j = 0; j < cnt; j++) {
+                    tmpCnt = Number(i) + Number(j);
+                    if (tmpCnt != srcarray.length) {
+                        strtempput[j] = srcarray[tmpCnt];
+                    }
+                    else{
+                        break;
+                    }
+                }
+                stroutput.push(strtempput);
+                strtempput = [];
+            }
+        }
+        console.log(stroutput);
+        document.getElementById("arrResult").innerHTML = stroutput;
+    }
+</script>

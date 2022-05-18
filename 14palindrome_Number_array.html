@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--14.Find the palindrome number in the given array 
+        (i)Input:[22,3,4,21,45,77,34]
+        (ii)[22,3,4,77]-->
+    <div class="headtxt">
+        <h4>14.Print the the palindrome number in the given array </h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="checkArray()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    function checkArray() {
+        // program to check if a palindrome or not       
+        var outArr = [];
+        var final = 0;
+        var rem, temp;
+        var srcArray = (document.getElementById("srcSentence").value).split(',');
+        for (var j = 0; j < srcArray.length; j++) {
+            opTxt = "";
+            var number = Number(srcArray[j]);
+            temp = number;
+            final = 0;
+            while (number > 0) {
+                rem = number % 10;
+                number = parseInt(number / 10);
+                final = final * 10 + rem;
+            }
+            if (final == temp) {
+                opTxt = final + " is Palindrome";
+                outArr.push(final);
+            }
+            else {
+                opTxt = number + " is not Palindrome";
+            }
+        }
+        console.log(outArr);
+        document.getElementById("arrResult").innerHTML = outArr;
+    }
+</script>

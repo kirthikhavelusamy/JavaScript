@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--16.convert the given number = 34531 and string= "salman" into array 
+        (i)Ouput:[3,4,5,3,1]
+        (ii)['s','a','l','m','a','n]-->
+    <div class="headtxt">
+        <h4>16.Convert the given number into array </h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="checkArray()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    function checkArray() {
+        // program to convert input to array   
+        var temp = Array.from(document.getElementById("srcSentence").value);
+        console.log(temp);
+        document.getElementById("arrResult").innerHTML = temp;
+    }
+</script>

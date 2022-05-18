@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <link href="assignStyle.css" rel="stylesheet">
+    <title>Length</title>
+</head>
+
+<body>
+    <!--15.Find the armstrong number in the given array 
+        (i)Input:[221,453,153,3434,1634]
+        (ii)[153,1634]-->
+    <div class="headtxt">
+        <h4>15.Print the the armstrong number in the given array </h4>
+    </div>
+    <table>
+        <tr>
+            <td>Enter the Input seperated by comma</td>
+            <td><input type="text" id="srcSentence"></td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <button class="btn btn-outline-success" onclick="checkArray()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="arrResult"></div>
+</body>
+
+</html>
+<script>
+    function checkArray() {
+        // program to check if a armstrong or not       
+        var outArr = [];
+        var endNm, arm, finalcnt, reNum;
+        var srcArray = (document.getElementById("srcSentence").value).split(',');
+        for (var j = 0; j < srcArray.length; j++) {
+            opTxt = "";
+            endNm = 0;
+            finalcnt = 0;
+            arm = 0;
+            reNum = 0;
+            var num = Number(srcArray[j]);
+            reNum = num;
+            while (reNum > 0) {
+                endNm = reNum % 10;
+                reNum = parseInt(reNum / 10); // convert float into Integer               
+                finalcnt = endNm * endNm * endNm;
+                arm += finalcnt;
+            }
+            if (arm == num) {
+                outArr.push(num)
+            }
+        }
+        console.log(outArr);
+        document.getElementById("arrResult").innerHTML = outArr;
+    }
+</script>
